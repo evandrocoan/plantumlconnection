@@ -55,6 +55,9 @@ except ImportError:
         ],
         install_requires=[
         ],
+        data_files = [
+            ("", ["LICENSE.txt"]),
+        ],
         py_modules=['plantuml_connection'],
         classifiers=[
             'Development Status :: 5 - Production/Stable',
