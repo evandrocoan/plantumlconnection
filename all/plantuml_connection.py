@@ -131,10 +131,12 @@ class PlantUML(object):
             openurl = urlopen(request)
             content = openurl.read()
 
-        except Exception as e:
-            raise PlantUMLConnectionError(e)
+        except Exception as error:
+            raise PlantUMLConnectionError(error)
+
         if openurl.getcode() != 200:
             raise PlantUMLHTTPError(openurl.getcode(), content)
+
         return content
 
     def processes_file(self, filename, outfile=None, errorfile=None, directory=''):
@@ -174,13 +176,14 @@ class PlantUML(object):
 
 
 def _build_parser():
+    default_server_url = 'http://www.plantuml.com/plantuml/png/'
     parser = ArgumentParser(description='Generate images from plantuml defined files using plantuml server')
     parser.add_argument('files', metavar='filename', nargs='+',
                         help='file(s) to generate images from')
     parser.add_argument('-o', '--out', default='',
                         help='directory to put the files into')
-    parser.add_argument('-s', '--server', default='http://www.plantuml.com/plantuml/png/',
-                        help='server to generate from, defaults to "http://www.plantuml.com/plantuml/png/"')
+    parser.add_argument('-s', '--server', default=default_server_url,
+                        help='server to generate from, defaults to "%s"' % default_server_url)
     return parser
 
 
