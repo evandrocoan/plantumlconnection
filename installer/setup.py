@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# -*- coding: UTF-8 -*-
 
 import os
 import sys
@@ -37,7 +37,6 @@ from plantuml_connection import __author__, __version_string__, __email__
 #     python setup sdist upload -r pypi
 #
 
-
 setup(
     name='plantuml_connection',
     version=__version_string__,
@@ -54,7 +53,7 @@ setup(
     ],
     py_modules=['plantuml_connection'],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
