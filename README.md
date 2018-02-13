@@ -28,18 +28,10 @@ Or by cloning it locally and running `python setup install`.
 
 ###Command line help:
 
-    usage: plantuml.py [-h] [-o OUT] [-s SERVER] filename [filename ...]
+To quick test it, you can run `python plantuml.py test.wsd`
 
-    Generate images from plantuml defined files using plantuml server
+To see all the command line options run `python plantuml.py --help`
 
-    positional arguments:
-      filename              file(s) to generate images from
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      -o OUT, --out OUT     directory to put the files into
-      -s SERVER, --server SERVER
-                            server to generate from, defaults to plantuml.com
 
 ###Project Links:
 
