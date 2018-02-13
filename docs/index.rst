@@ -21,7 +21,7 @@ Commandline Use
 
     $ ls
     sample.txt
-    $ python -m plantuml sample.txt 
+    $ python -m plantuml sample.txt
     sample.txt: success.
     $ ls
     sample.png	sample.txt
@@ -36,7 +36,7 @@ Commandline Use
 Library
 ===========
 
-.. automodule:: plantuml
+.. automodule:: plantuml_connection
    :members:
 
 License

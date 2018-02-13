@@ -2,9 +2,20 @@
 
 from argparse import ArgumentParser
 from os import environ, path, makedirs
-from urllib.parse import urlencode
-from urllib.request import Request, urlopen
 from zlib import compress
+
+try:
+    from urllib import urlencode
+except:
+    from urllib.parse import urlencode
+    from urllib.request import Request, urlopen
+
+
+__version__ = 1, 0, 0
+__version_string__ = '.'.join(str(x) for x in __version__)
+
+__author__ = 'Doug Napoleone, Samuel Marks, Evandro Coan'
+__email__ = 'doug.napoleone+plantuml@gmail.com'
 
 
 class PlantUMLError(Exception):

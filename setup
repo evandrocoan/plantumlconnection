@@ -1,13 +1,7 @@
 #!/usr/bin/env python
 
 from setuptools import setup
-
-__version__ = 1, 0, 0
-__version_string__ = '.'.join(str(x) for x in __version__)
-
-__author__ = 'Doug Napoleone, Samuel Marks, Evandro Coan'
-__email__ = 'doug.napoleone+plantuml@gmail.com'
-
+from plantuml import __author__, __version_string__, __email__
 
 #
 # Release process
@@ -38,11 +32,11 @@ __email__ = 'doug.napoleone+plantuml@gmail.com'
 
 
 setup(
-    name='plantuml',
+    name='plantuml_connection',
     version=__version_string__,
     description='',
     long_description=open('README.md', 'r').read(),
-    url='https://github.com/dougn/python-plantuml/',
+    url='https://github.com/evandroforks/PlantUmlConnection',
     author=__author__,
     author_email=__email__,
     license='BSD',
@@ -51,7 +45,7 @@ setup(
     ],
     install_requires=[
     ],
-    py_modules=['plantuml'],
+    py_modules=['plantuml_connection'],
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Programming Language :: Python',
@@ -64,5 +58,5 @@ setup(
         'Topic :: Utilities',
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
-    keywords=['plantuml', 'uml']
+    keywords=['plantuml_connection', 'uml']
 )
