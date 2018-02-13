@@ -11,7 +11,7 @@ except:
     from urllib.request import Request, urlopen
 
 
-__version__ = 1, 0, 1
+__version__ = 1, 0, 3
 __version_string__ = '.'.join(str(x) for x in __version__)
 
 __author__ = 'Doug Napoleone, Samuel Marks, Evandro Coan'
