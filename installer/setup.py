@@ -41,7 +41,7 @@ setup(
     name='plantuml_connection',
     version=__version_string__,
     description='',
-    long_description=open('README.md', 'r').read(),
+    long_description=open('README.md').read(),
     url='https://github.com/evandroforks/PlantUmlConnection',
     author=__author__,
     author_email=__email__,
