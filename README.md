@@ -28,9 +28,24 @@ Or by cloning it locally and running `python setup install`.
 
 ###Command line help:
 
-To quick test it, you can run `python plantuml.py test.wsd`
+To quick test it, you can run `python all/plantuml.py test/test.wsd`
 
-To see all the command line options run `python plantuml.py --help`
+To see all the command line options run `python all/plantuml.py --help`
+
+
+## Sublime Text Dependency
+
+To use this as a Package Control Dependency https://packagecontrol.io/docs/dependencies create
+this `dependencies.json` file on the root of your Package:
+```json
+{
+    "*": {
+        "*": [
+            "PlantUmlConnection"
+        ]
+    }
+}
+```
 
 
 ###Project Links:
