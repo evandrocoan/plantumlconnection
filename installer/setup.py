@@ -1,7 +1,14 @@
 #!/usr/bin/env python
 
+
+import os
+import sys
+
 from setuptools import setup
-from plantuml import __author__, __version_string__, __email__
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'all'))
+from plantuml_connection import __author__, __version_string__, __email__
+
 
 #
 # Release process
@@ -24,10 +31,10 @@ from plantuml import __author__, __version_string__, __email__
 # password: YOUR_PASSWORD_HERE
 #
 # Run this to build the `dist/PACKAGE_NAME-xxx.tar.gz` file
-#     python setup.pyc sdist
+#     python setup sdist
 #
 # Run this to build & upload it to `pypi`:
-#     python setup.pyc sdist upload -r pypi
+#     python setup sdist upload -r pypi
 #
 
 
