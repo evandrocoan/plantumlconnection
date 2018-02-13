@@ -3,6 +3,11 @@
 [Plantuml](http://plantuml.sourceforge.net/index.html) is a library for
 generating UML diagrams from a simple text markup language.
 
+This is a Python 3 simplified implementation. For Python 2 see:
+
+1. https://github.com/dougn/python-plantuml
+1. https://github.com/SamuelMarks/python-plantuml
+
 This is a simple python remote client interface to a
 [plantuml](http://plantuml.sourceforge.net/index.html) server using the
 same custom encoding used by most other plantuml
@@ -15,6 +20,7 @@ a shell subprocesses.
 
 This client defaults to the public [plantuml server](http://www.plantuml.com/plantuml/),
 but can be used against any server.
+
 
 ###Install
 
