@@ -35,10 +35,10 @@ except ImportError:
     # password: YOUR_PASSWORD_HERE
     #
     # Run this to build the `dist/PACKAGE_NAME-xxx.tar.gz` file
-    #     python setup sdist
+    #     python setup.py sdist
     #
     # Run this to build & upload it to `pypi`:
-    #     python setup sdist upload -r pypi
+    #     python setup.py sdist upload -r pypi
     #
 
     setup(

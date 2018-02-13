@@ -30,7 +30,9 @@ PS: At some point this newer version will be uploaded to PyPi, at which point yo
 
     pip install plantuml
 
-Or by cloning it locally and running `python setup install`.
+Or by cloning it locally and running `python setup.py install` or `python setup.py develop` to
+install it on development mode.
+
 
 ###Command line help:
 
