@@ -24,15 +24,17 @@ PS: At some point this newer version will be uploaded to PyPi, at which point yo
 
     pip install plantuml
 
+Or by cloning it locally and running `python setup install`.
+
 ###Command line help:
 
     usage: plantuml.py [-h] [-o OUT] [-s SERVER] filename [filename ...]
-    
+
     Generate images from plantuml defined files using plantuml server
-    
+
     positional arguments:
       filename              file(s) to generate images from
-    
+
     optional arguments:
       -h, --help            show this help message and exit
       -o OUT, --out OUT     directory to put the files into
