@@ -1,4 +1,4 @@
-###Python-PlantUML
+# Python-PlantUML
 
 [Plantuml](http://plantuml.sourceforge.net/index.html) is a library for
 generating UML diagrams from a simple text markup language.
@@ -22,7 +22,7 @@ This client defaults to the public [plantuml server](http://www.plantuml.com/pla
 but can be used against any server.
 
 
-###Install
+## Install
 
     pip install git+https://github.com/SamuelMarks/python-plantuml#egg=plantuml
 
@@ -34,7 +34,7 @@ Or by cloning it locally and running `python setup.py install` or `python setup.
 install it on development mode.
 
 
-###Command line help:
+## Command line help:
 
 To quick test it, you can run `python all/plantuml.py test/test.wsd`
 
@@ -56,7 +56,7 @@ this `dependencies.json` file on the root of your Package:
 ```
 
 
-###Project Links:
+## Project Links:
 
 -   [Documentation](http://pythonhosted.org/plantuml/)
 -   [PyPi](https://pypi.python.org/pypi/plantuml)
