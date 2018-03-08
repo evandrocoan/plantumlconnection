@@ -129,10 +129,17 @@ class PlantUML(object):
         try:
             request = Request(url)
             openurl = urlopen(request)
-            content = openurl.read()
+            http_headers = openurl.info()
 
         except Exception as error:
             raise PlantUMLConnectionError(error)
+
+        # print( "http_headers: %s" % http_headers )
+        if "X-PlantUML-Diagram-Error" in http_headers:
+            raise ValueError( "Syntax error on diagram: %s" % str( http_headers ).strip('\n') )
+
+        else:
+            content = openurl.read()
 
         if openurl.getcode() != 200:
             raise PlantUMLHTTPError(openurl.getcode(), content)
