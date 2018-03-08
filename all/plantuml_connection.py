@@ -4,11 +4,7 @@ from argparse import ArgumentParser
 from os import environ, path, makedirs
 from zlib import compress
 
-try:
-    from urllib import urlencode
-except:
-    from urllib.parse import urlencode
-    from urllib.request import Request, urlopen
+from urllib.request import Request, urlopen
 
 
 __version__ = 1, 0, 3
@@ -44,6 +40,16 @@ class PlantUMLHTTPError(PlantUMLConnectionError):
         if not self.message:
             self.message = "%d: %s" % (
                 self.response.status, self.response.reason)
+
+
+class PlantUMLSyntaxError(PlantUMLError):
+
+    def __init__(self, http_headers, *args, **kwdargs):
+        super(PlantUMLError, self).__init__(*args, **kwdargs)
+        self.http_headers = http_headers
+
+    def __str__(self):
+        return str( str( self.http_headers ).strip('\n') )
 
 
 def deflate_and_encode(plantuml_text):
@@ -136,7 +142,7 @@ class PlantUML(object):
 
         # print( "http_headers: %s" % http_headers )
         if "X-PlantUML-Diagram-Error" in http_headers:
-            raise ValueError( "Syntax error on diagram: %s" % str( http_headers ).strip('\n') )
+            raise PlantUMLSyntaxError( http_headers )
 
         else:
             content = openurl.read()
