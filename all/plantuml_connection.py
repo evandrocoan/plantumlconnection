@@ -49,7 +49,7 @@ class PlantUMLSyntaxError(PlantUMLError):
         self.http_headers = http_headers
 
     def __str__(self):
-        return str( str( self.http_headers ).strip('\n') )
+        return str( self.http_headers ).strip('\n')
 
 
 def deflate_and_encode(plantuml_text):
