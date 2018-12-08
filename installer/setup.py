@@ -42,7 +42,7 @@ setup(
     version=__version_string__,
     description='',
     long_description=open('README.md').read(),
-    url='https://github.com/evandroforks/PlantUmlConnection',
+    url='https://github.com/evandroforks/plantumlconnection',
     author=__author__,
     author_email=__email__,
     license='BSD',
