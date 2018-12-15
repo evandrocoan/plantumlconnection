@@ -7,7 +7,7 @@ import sys
 from setuptools import setup
 
 sys.path.append(os.path.join(os.path.dirname(__file__), 'all'))
-from plantuml_connection import __author__, __version_string__, __email__
+from all.plantuml_connection import __author__, __version_string__, __email__
 
 
 #
@@ -48,6 +48,7 @@ setup(
     license='BSD',
     package_dir = {'': 'all'},
     packages = [
+        'plantuml_connection'
     ],
     install_requires=[
     ],
