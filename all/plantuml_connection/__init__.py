@@ -133,10 +133,7 @@ class PlantUML(object):
         """
         url = self.get_url(plantuml_text)
         try:
-            headers = {
-                "User-Agent": ""
-            }
-            request = Request(url, headers=headers)
+            request = Request(url)
             openurl = urlopen(request)
             http_headers = openurl.info()
 
